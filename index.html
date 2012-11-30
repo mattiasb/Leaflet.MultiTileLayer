@@ -15,60 +15,64 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/moonlite/Leaflet.MultiTileLayer">View on GitHub</a>
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/moonlite/Leaflet.MultiTileLayer">View on GitHub</a>
 
-          <h1 id="project_title">Leaflet.multitilelayer</h1>
-          <h2 id="project_tagline">An extension to Leaflets TileLayer class, adding support for defining a TileLayer in terms of serveral TileServer urls.</h2>
+        <h1 id="project_title">Leaflet.MultiTileLayer</h1>
+        <h2 id="project_tagline">A Leaflet plugin, adding support for defining a TileLayer in terms of serveral TileServer urls.</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/moonlite/Leaflet.MultiTileLayer/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/moonlite/Leaflet.MultiTileLayer/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/moonlite/Leaflet.MultiTileLayer/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/moonlite/Leaflet.MultiTileLayer/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+		<h2>Demo</h2>
+        Try to zoom in a few zoom levels and watch the tiles change.
+		<br /><br />
+		<iframe src="Leaflet.MultiTileLayer/examples/index.html" height="500" width="640"></iframe>
+        <h3>Code</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<!-- EXAMPLE CODE -->
+<pre><code>var map = L.map('map').setView(L.latLng(57.7, 11.9), 12);
+L.TileLayer.multi({
+    14: {
+        url: 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+        subdomains:'1234'
+    },
+    17: { 
+        url: 'http://server.arcgisonline.com/ArcGIS/' 
+           + 'rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+    }
+}, {
+    minZoom: 0,
+    maxZoom: 17,
+    attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; '
+        + '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
+        + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+        +  '&mdash; '
+        + 'Tiles &copy; Esri &mdash; '
+        + 'Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, '
+        + 'Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+}).addTo(map);</code></pre>
+<!-------------------->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+      <h2>Project</h2>
+	  Please report bugs and file requests in <a href="https://github.com/moonlite/Leaflet.MultiTileLayer/issues">the GitHub Issue tracker</a>. 
+	  <br />Also: Pull requests makes me happy!
+	  </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Leaflet.multitilelayer maintained by <a href="https://github.com/moonlite">moonlite</a></p>
+        <p class="copyright">Leaflet.MultiTileLayer maintained by <a href="https://github.com/moonlite">moonlite</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
-
   </body>
 </html>
