@@ -3,12 +3,17 @@
 <head>
 	<title>Leaflet debug page</title>
 	<link rel="stylesheet" href="lib/leaflet/dist/leaflet.css" />
-	<!--[if lte IE 8]><link rel="stylesheet" href="lib/leaflet/dist/leaflet.ie.css" /><![endif]-->
+	<link rel="stylesheet" href="lib/Leaflet.zoomslider/src/L.Control.Zoomslider.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="lib/leaflet/dist/leaflet.ie.css" />
+		<link rel="stylesheet" href="lib/Leaflet.zoomslider/src/L.Control.Zoomslider.ie.css" />
+	<![endif]-->
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 	<div id="map"></div>
 	<script src="lib/leaflet/dist/leaflet-src.js"></script>
+	<script src="lib/Leaflet.zoomslider/src/L.Control.Zoomslider.js"></script>
 	<script src="../src/L.TileLayer.Multi.js"></script>
 	<script src="script.js"></script>
 </body>

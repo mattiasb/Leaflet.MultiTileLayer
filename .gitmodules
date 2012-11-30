@@ -1,3 +1,6 @@
 [submodule "examples/lib/leaflet"]
 	path = examples/lib/leaflet
 	url = git://github.com/CloudMade/Leaflet.git
+[submodule "examples/lib/Leaflet.zoomslider"]
+	path = examples/lib/Leaflet.zoomslider
+	url = git://github.com/kartena/Leaflet.zoomslider.git
