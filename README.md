@@ -1,7 +1,7 @@
 Leaflet.MultiTileLayer
 ==
 
-An extension to [Leaflets][1] [TileLayer][2] class, adding support for defining a TileLayer in terms of serveral TileServer urls.
+A [Leaflet][1] plugin, adding support for defining a [TileLayer][2] in terms of serveral TileServer urls.
 
 ### Example
 ```javascript
@@ -29,5 +29,5 @@ L.TileLayer.multi({
 ```
 
 --
-1: http://www.leafletjs.com
-2: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
+[1]: http://www.leafletjs.com
+[2]: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
