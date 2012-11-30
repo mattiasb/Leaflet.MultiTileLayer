@@ -1,24 +1,38 @@
 L.TileLayer.Multi = L.TileLayer.extend({
-	initialize: function (defs, options) {
+	_tileDefs: [],
+
+	initialize: function (tileDefs, options) {
 		L.TileLayer.prototype.initialize.call(this, undefined, options);
-		this._urls = {};
-		this._initUrls(defs);
-	},
-	_initUrls: function(defs){
-		for(var i=0;i<defs.length;i++){
-			var z, def = defs[i];
-			for(z=def.minZoom;z<=def.maxZoom;z++){
-				this._urls[z] = def.url;
+		var zoom = this.options.minZoom;
+		for(var maxZoom in tileDefs){
+			var tileDef = this._fixTileDef(tileDefs[maxZoom]);
+
+			for(;zoom <= maxZoom; zoom++){
+				this._tileDefs[zoom] = tileDef;
 			}
 		}
 	},
+	_fixTileDef: function(tileDef){
+		var tdef = L.extend({}, {
+			subdomains: L.TileLayer.prototype.options.subdomains
+		}, tileDef);
+		if (typeof tdef.subdomains === 'string') {
+			tdef.subdomains = tdef.subdomains.split('');
+		}
+		return tdef;
+	},
+	_getSubdomain: function (tilePoint, subdomains) {
+		var index = (tilePoint.x + tilePoint.y) % subdomains.length;
+		return subdomains[index];
+	},
 	setUrl: function() {},
 	getTileUrl: function (tilePoint) {
-		var zoom = this._getZoomForUrl();
+		var zoom = this._getZoomForUrl(),
+			tileDef = this._tileDefs[zoom];
 		this._adjustTilePoint(tilePoint);
 
-		return L.Util.template(this._urls[zoom], L.extend({
-			s: this._getSubdomain(tilePoint),
+		return L.Util.template(tileDef.url, L.extend({
+			s: this._getSubdomain(tilePoint, tileDef.subdomains),
 			z: zoom,
 			x: tilePoint.x,
 			y: tilePoint.y
@@ -26,6 +40,6 @@ L.TileLayer.Multi = L.TileLayer.extend({
 	}
 });
 
-L.tileLayer.multi = function(defs, options){
+L.TileLayer.multi = function(defs, options){
 	return new L.TileLayer.Multi(defs,options);
 };
