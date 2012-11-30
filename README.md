@@ -14,7 +14,8 @@ L.TileLayer.multi({
 	},
 	17: { // this layer is shown at zoomlevels between maxZoom of 
           // previous layer and 17 (ie 15, 16 and 17)
-		url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+		url: 'http://server.arcgisonline.com/ArcGIS/' 
+           + 'rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 	}
 }, {
 	minZoom: 0,
