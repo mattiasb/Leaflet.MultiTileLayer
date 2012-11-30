@@ -1,7 +1,7 @@
 [Leaflet.MultiTileLayer][3]
 ==
 
-A [Leaflet][1] plugin, adding support for defining a [TileLayer][2] in terms of serveral TileServer urls.
+A [Leaflet][1] plugin, adding support for defining a [TileLayer][2] in terms of several TileServer urls.
 
 ### Usage
 ```javascript
