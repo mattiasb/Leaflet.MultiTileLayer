@@ -3,16 +3,17 @@ Leaflet.MultiTileLayer
 
 A [Leaflet][1] plugin, adding support for defining a [TileLayer][2] in terms of serveral TileServer urls.
 
-### Example
+### Usage
 ```javascript
 var map = L.map('map').setView(L.latLng(57.7, 11.9), 12);
 
 L.TileLayer.multi({
-	14: {
+	14: { // this layer is shown at zoomlevels between minZoom and 14 (ie 0,1,..,13,14)
 		url: 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 		subdomains:'1234'
 	},
-	17: {
+	17: { // this layer is shown at zoomlevels between maxZoom of 
+          // previous layer and 17 (ie 15, 16 and 17)
 		url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 	}
 }, {
