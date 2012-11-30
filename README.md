@@ -30,6 +30,16 @@ L.TileLayer.multi({
 }).addTo(map);
 ```
 
+### Look at an example
+
+```bash
+git clone https://github.com/moonlite/Leaflet.MultiTileLayer
+cd Leaflet.MultiTileLayer
+git submodule init
+git submodule update
+xdg-open examples/index.html # Just "open" on MacOS
+```
+ 
 --
 [1]: http://www.leafletjs.com
 [2]: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
