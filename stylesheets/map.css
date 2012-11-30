@@ -1,0 +1,16 @@
+#map {
+	width:  640px;
+	height: 480px;
+}
+@media screen and (max-width: 480px) {
+	#map {
+		width:  400px;
+		height: 300px;
+		min-width: 320px;
+		max-width: 480px;
+	}
+}
+/* fix for interaction with zoomslider and the gh-pages theme */
+.leaflet-control-zoomslider-slider-knob {
+	margin-left: 6px!important;
+}

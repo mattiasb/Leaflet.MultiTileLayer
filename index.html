@@ -5,8 +5,15 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Leaflet.multitilelayer : An extension to Leaflets TileLayer class, adding support for defining a TileLayer in terms of serveral TileServer urls." />
-
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/map.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+	<link rel="stylesheet" href="scripts/lib/Leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="scripts/lib/Leaflet.zoomslider/src/L.Control.Zoomslider.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="scripts/lib/Leaflet/dist/leaflet.ie.css" />
+		<link rel="stylesheet" href="scripts/lib/Leaflet.zoomslider/src/L.Control.Zoomslider.ie.css" />
+	<![endif]-->
 
     <title>Leaflet.multitilelayer</title>
   </head>
@@ -34,7 +41,7 @@
 		<h2>Demo</h2>
         Try to zoom in a few zoom levels and watch the tiles change.
 		<br /><br />
-		<iframe src="Leaflet.MultiTileLayer/examples/index.html" height="500" width="640"></iframe>
+		<div id="map"></div>
         <h3>Code</h3>
 
 <!-- EXAMPLE CODE -->
@@ -74,5 +81,12 @@ L.TileLayer.multi({
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+
+
+	<script src="scripts/lib/Leaflet/dist/leaflet-src.js"></script>
+	<script src="scripts/lib/Leaflet.zoomslider/src/L.Control.Zoomslider.js"></script>
+	<script src="scripts/lib/Leaflet.MultiTileLayer/src/L.TileLayer.Multi.js"></script>
+	<script src="scripts/lib/Leaflet.MultiTileLayer/examples/script.js"></script>
+
   </body>
 </html>

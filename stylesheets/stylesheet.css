@@ -22,9 +22,9 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* border: 0; */
   font: inherit;
   vertical-align: baseline;
 }
@@ -143,7 +143,7 @@ strong {
   font-weight: bold;
 }
 
-img {
+img:not(.leaflet-tile) {
   position: relative;
   margin: 0 auto;
   max-width: 739px;
@@ -274,7 +274,7 @@ Full-Width Styles
   position: relative;
   max-width: 640px;
   padding: 20px 10px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 #forkme_banner {
