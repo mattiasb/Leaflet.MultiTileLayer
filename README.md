@@ -1,7 +1,7 @@
 Leaflet.MultiTileLayer
 ==
 
-An extension to [Leaflets][1] [TileLayer][2] class, adding support for defining a TileLayer in terms of serveral TileServer urls.
+An extension to [Leaflet][1]s [TileLayer][2] class, adding support for defining a TileLayer in terms of serveral TileServer urls.
 
 ### Example
 ```javascript
