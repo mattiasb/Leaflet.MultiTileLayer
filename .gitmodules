@@ -1,3 +1,0 @@
-[submodule "Leaflet.MultiTileLayer"]
-	path = Leaflet.MultiTileLayer
-	url = git://github.com/moonlite/Leaflet.MultiTileLayer.git
