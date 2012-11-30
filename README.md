@@ -1,4 +1,4 @@
-Leaflet.MultiTileLayer
+[Leaflet.MultiTileLayer][3]
 ==
 
 A [Leaflet][1] plugin, adding support for defining a [TileLayer][2] in terms of serveral TileServer urls.
@@ -30,9 +30,7 @@ L.TileLayer.multi({
 }).addTo(map);
 ```
 
-### Demo
-
-I will add a web page soon, but until then:
+### Testing
 
 ```bash
 git clone https://github.com/moonlite/Leaflet.MultiTileLayer
@@ -45,3 +43,4 @@ xdg-open examples/index.html # Just "open" on MacOS
 --
 [1]: http://www.leafletjs.com
 [2]: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
+[3]: http://moonlite.github.com/Leaflet.MultiTileLayer/
