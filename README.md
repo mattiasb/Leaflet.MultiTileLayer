@@ -27,5 +27,5 @@ L.tileLayer.multi([{
 ```
 
 --
-1: http://www.leafletjs.com
-2: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
+[1]: http://www.leafletjs.com
+[2]: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
