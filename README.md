@@ -30,7 +30,9 @@ L.TileLayer.multi({
 }).addTo(map);
 ```
 
-### Look at an example
+### Demo
+
+I will add a web page soon, but until then:
 
 ```bash
 git clone https://github.com/moonlite/Leaflet.MultiTileLayer
