@@ -35,8 +35,7 @@ L.TileLayer.multi({
 ```bash
 git clone https://github.com/moonlite/Leaflet.MultiTileLayer
 cd Leaflet.MultiTileLayer
-git submodule init
-git submodule update
+git submodule update --init
 xdg-open examples/index.html # Just "open" on MacOS
 ```
  
