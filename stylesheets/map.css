@@ -10,3 +10,7 @@
 		max-width: 480px;
 	}
 }
+.leaflet-control-zoomslider a:hover{
+	color:black!important ;
+	text-shadow: black 0px 0px!important;
+}
