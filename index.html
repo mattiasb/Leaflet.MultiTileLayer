@@ -38,12 +38,18 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-		<h2>Demo</h2>
+	
+	<h2>Disclaimer</h2>
+	This was an evening hack trying to package a solution for something that we did at [Kartena][4]. 
+	A few days after I finished it I found another, much simpler, solution that can be seen in [this jsfiddle][5]. 
+	You should probably use that approach instead. However if you find any usages for this, please let me know. 
+      
+	<h3>Demo</h3>
         Try to zoom in a few zoom levels and watch the tiles change.
-		<br /><br />
-		<div id="map"></div>
+	<br /><br />
+	<div id="map"></div>
+        
         <h3>Code</h3>
-
 <!-- EXAMPLE CODE -->
 <pre><code>var map = L.map('map').setView(L.latLng(57.7, 11.9), 12);
 L.TileLayer.multi({
