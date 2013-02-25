@@ -1,6 +1,15 @@
 [Leaflet.MultiTileLayer][3]
 ==
 
+## Disclaimer 
+
+This was an evening hack trying to package a solution for something that we did at [Kartena][4]. 
+A few days after I finished it I found another, much simpler, solution that can be seen in [this jsfiddle][5]. 
+You should probably use that approach instead. However if you find any usages for this, please let me know. 
+
+## Description
+
+
 A [Leaflet][1] plugin, adding support for defining a [TileLayer][2] in terms of several TileServer urls.
 
 ### Usage
@@ -43,3 +52,5 @@ xdg-open examples/index.html # Just "open" on MacOS
 [1]: http://www.leafletjs.com
 [2]: https://github.com/CloudMade/Leaflet/blob/master/src/layer/tile/TileLayer.js
 [3]: http://moonlite.github.com/Leaflet.MultiTileLayer/
+[4]: http://www.kartena.se
+[5]: http://jsfiddle.net/mattias_jcb/3hkYh/
